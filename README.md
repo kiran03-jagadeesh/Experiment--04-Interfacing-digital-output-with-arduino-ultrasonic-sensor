@@ -54,18 +54,49 @@ speed of sound in the air at 20ºC (68ºF) = 343m/s
 10.	Plot the graph for the output voltage vs the resistance 
 
 
-### PROGRAM 
-
-### Distance vs measurement table 
-
-
-
-
-
+### PROGRAM :
+~~~
+Developed by: KIRAN J
+Regester no: 212221240022
+#define echoPin 9
+#define trigPin 10
 
 
+long duration;
+int distance;
 
-### RESULTS
+void setup()
+{
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  Serial.begin(9600);
+}
+void loop(){
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  
+  duration=pulseIn(echoPin, HIGH);
+  
+  distance=duration*0.034/2;
+  
+  Serial.print("Distance");
+  Serial.print(distance);
+  Serial.println("cm");
+}
+~~~
+
+### Output :
+![output](img1..jpg)
+
+
+
+### RESULTS :
+ 
+ Thus, we have interfaced an FSR(force sensitive resistor) and scale the output voltage obtained to pressure applied is verified.
 
 
 
