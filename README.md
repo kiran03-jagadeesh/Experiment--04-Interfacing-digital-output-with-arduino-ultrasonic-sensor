@@ -1,4 +1,4 @@
-# EXPERIMENT-NO--05-Distance measurement using Ultrasonic sensor
+# EXPERIMENT-NO--04-Interfacing digital output with arduino ultrasonic sensor
 
 ## AIM: 
 To interface an ultrasonic sensor and measure the distance 
